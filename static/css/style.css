@@ -116,9 +116,9 @@ body,
   height: 100%;
 }
 body {
-  color: #565a5f;
+  color: #000000;
   background: #f5f8f9;
-  font: 14px "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+  font: 16px "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 a {
@@ -345,7 +345,7 @@ code {
   -moz-transition: 0.2s ease;
   -ms-transition: 0.2s ease;
   transition: 0.2s ease;
-  color: #565a5f;
+  color: #000000;
 }
 #header a:hover {
   color: #38b7ea;
@@ -374,8 +374,10 @@ code {
   display: inline-block;
 }
 .header-inner #logo .logo {
-  margin-right: 5px;
   display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
 }
 .header-inner #logo .site-title {
   font-size: 16px;
@@ -737,7 +739,7 @@ code {
   color: #898d92;
 }
 #profile .inner .social-links > table td a:hover {
-  color: #565a5f;
+  color: #000000;
 }
 #profile .inner .social-links > table td a.tooltip:hover:after {
   right: -50%;
@@ -866,7 +868,7 @@ a.article-title:hover {
   content: "#";
 }
 .article-entry {
-  color: #565a5f;
+  color: #000000;
   padding: 0 20px;
   line-height: 1.6em;
 }
@@ -1100,7 +1102,7 @@ a.article-title:hover {
   display: block;
 }
 .article-nav-link-wrap:hover {
-  color: #565a5f;
+  color: #000000;
 }
 @media screen and (min-width: 1200px) {
   .article-nav-link-wrap {
@@ -1464,6 +1466,7 @@ ol.toc {
 .archive-article-date {
   display: block;
   margin-top: 8px;
+  color: #aaa;
 }
 .layout-wrap-inner.list-categories ul {
   margin-left: 15px;
@@ -1843,7 +1846,7 @@ ol.toc {
   }
 }
 #recent-post li {
-  padding: 10px 0 10px 94px;
+  padding: 10px 0 10px 0px;
 }
 #recent-post li:before,
 #recent-post li:after {
