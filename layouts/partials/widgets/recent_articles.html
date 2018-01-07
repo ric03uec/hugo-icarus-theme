@@ -5,7 +5,9 @@
     </h3>
     <div class="widget">
         <ul id="recent-post">
-            {{ range first 6 (where .Site.RegularPages "Type" "post") }}
+            {{ range first 9 (where .Site.RegularPages "Type" "post") }}
+            <!-- do not show the About page in the main list -->
+            {{ if ne .Title "About" }}
             <li>
               <!--
                 <div class="item-thumbnail">
@@ -23,6 +25,7 @@
                     </p>
                 </div>
             </li>
+            {{ end }}
             {{ end }}
         </ul>
     </div>

@@ -1,3 +1,4 @@
+<!---
 <article class="archive-article archive-type-post">
     <div class="archive-article-inner">
         {{ if isset .Params "banner" }}
@@ -17,5 +18,34 @@
                 <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format .Site.Params.date_format }}</time>
             </div>
         </header>
+    </div>
+</article>
+-->
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+
+      {{ if in .Params.categories "technical" }}
+        <!-- don't show banner if a post if from technical category -->
+      {{ else }}
+        {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
+        <a href="{{ .Permalink }}" itemprop="url">
+            <img src="{{ .Params.banner | absURL }}" class="article-banner">
+        {{ end }}
+        </a>
+      {{ end }}
+
+      {{ partial "article_header" . }}
+      <div class="article-entry" itemprop="articleBody">
+          <p>
+              {{ printf "%s" .Summary | markdownify }}
+          </p>
+          <p class="article-more-link">
+              <a href="{{ .Permalink }}">
+                  {{with .Site.Data.l10n.articles.read_more}}{{.}}{{end}}
+              </a>
+          </p>
+      </div>
+        {{ partial "article_footer" . }}
     </div>
 </article>

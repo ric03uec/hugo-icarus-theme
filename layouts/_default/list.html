@@ -1,6 +1,6 @@
 {{ define "main" }}
     {{ $context := . }}
-    
+
     {{ with .Content }}
         {{ partial "single_article.html" $context }}
     {{ else }}
@@ -11,7 +11,7 @@
         <div class="archives">
             {{ $paginator := .Paginate .Data.Pages }}
             {{ range $paginator.Pages }}
-                {{ .Render "summary" }} 
+                {{ .Render "summary" }}
             {{ end }}
         </div>
     </section>
